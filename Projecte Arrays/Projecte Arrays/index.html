@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <button onclick="inicial()">Inicial</button><br>
+    <label for="dataSelector">Selecciona una base de datos:</label>
+    <select id="dataSelector" onchange="loadData()">
+        <option value="pokemon">Pokemons</option>
+        <option value="municipis">Municipios</option>
+        <option value="earthMeteorites">Meteoritos</option>
+        <option value="movies">Películas</option>
+    </select>
+    <hr>
+    <button onclick="inicialNou()">Inicial nou</button>
+    <button onclick="orderAsc()">Ordena Asc</button>
+    <button onclick="orderDesc()">Ordena Desc</button>
+    <button onclick="searchList()">Search</button>
+    <button onclick="calcMitjana()">Calculate Average</button>
+    <button onclick="printList()">printList</button><br>
+    <button onclick="graficPo()">Grafico Pokémon</button>
+    <button onclick="graficMo()">Grafico Películas</button>
+    <input type="text" value="" id="txtSearch" oninput="filterList()">
+    <div id="resultat"></div>
+
+    <div class="chart-container" style="position: relative; width:700px">
+        <canvas id="myChart"></canvas>
+    </div>
+    
+    
+
+        
+</body>
+</html>
